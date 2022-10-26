@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Navbars, Hero, Services, Whyus, Testimonial, Banner} from "../components";
+import {Navbars, Hero, Services, Whyus, Testimonial, Banner, Footer, Faq} from "../components";
 const Home =()=>{
     useEffect(()=>{
         document.title ="BCR | Home";
@@ -10,11 +10,13 @@ const Home =()=>{
                 <Navbars/>
                 <Hero/>
             </div>
-            <div>
+            <div className="body2">
                 <Services/>
                 <Whyus/>
                 <Testimonial/>
                 <Banner/>
+                <Faq/>
+                <Footer/>
             </div>
         </div>
     )

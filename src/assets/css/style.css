@@ -10,6 +10,12 @@
 
 .body{
     background-color:var(--bg);
+    font-family: Helvetica;
+    font-style: normal;
+}
+.body2{
+    font-family: Helvetica;
+    font-style: normal;
 }
 .checklist {
     background-color: var(--bgcheck);
@@ -25,6 +31,5 @@
 }
 .getting-started {
     background-color: var(--bgbanner);
-    height: 436px;
     border-radius: 13px;
-  }
+}

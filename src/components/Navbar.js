@@ -22,10 +22,10 @@ const Navbars = ()=>{
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Our Services</Nav.Link>
-                  <Nav.Link href="#action2">Why Us</Nav.Link>
-                  <Nav.Link href="#action2">Testimonial</Nav.Link>
-                  <Nav.Link href="#action2">FAQ</Nav.Link>
+                  <Nav.Link href="#services">Our Services</Nav.Link>
+                  <Nav.Link href="#whyus">Why Us</Nav.Link>
+                  <Nav.Link href="#testimonial">Testimonial</Nav.Link>
+                  <Nav.Link href="#faq">FAQ</Nav.Link>
                 </Nav>
                 <Button variant='success' className='btn btn-green'>Register</Button>
               </Offcanvas.Body>

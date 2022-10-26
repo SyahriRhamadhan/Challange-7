@@ -6,7 +6,7 @@ import Card4 from "../assets/img/icon_professional.png"
 
 const Whyus =()=>{
     return(
-        <Container >
+        <Container id='whyus'>
             <div className="row col-md py-5">
                 <h3 className="fw-bold">Why Us?</h3>
                 <p>Mengapa harus pilih Binar Car Rental?</p>
@@ -36,7 +36,7 @@ const Whyus =()=>{
                     <Card style={{ width: '18rem' }} className='p-2'>
                         <Card.Img className="ms-3 mt-3" variant="top" style={{width:'32px', height:'32px'}} src={Card3} />
                         <Card.Body>
-                            <Card.Title>Harga Murah</Card.Title>
+                            <Card.Title>Layanan 24 Jam</Card.Title>
                             <Card.Text>
                             Harga murah dan bersaing, bisa bandingkan harga kami dengan rental mobil lain.
                             </Card.Text>
@@ -47,7 +47,7 @@ const Whyus =()=>{
                     <Card style={{ width: '18rem' }} className='p-2'>
                         <Card.Img className="ms-3 mt-3" variant="top" style={{width:'32px', height:'32px'}} src={Card4} />
                         <Card.Body>
-                            <Card.Title>Harga Murah</Card.Title>
+                            <Card.Title>Sopir Profesional</Card.Title>
                             <Card.Text>
                             Harga murah dan bersaing, bisa bandingkan harga kami dengan rental mobil lain.
                             </Card.Text>
