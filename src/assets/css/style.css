@@ -1,8 +1,30 @@
 :root{
     --bg: #F1F3FF;
+    --btngreen: #5CB85F;
+    --bgbanner: #0d28a6;
+    --bgcheck: #CFD4ED;
+    --white: #ffff;
 
+    ;
 }
 
 .body{
     background-color:var(--bg);
 }
+.checklist {
+    background-color: var(--bgcheck);
+    border-radius: 50%;
+    color: var(--bgbanner);
+    padding: 3px;
+    font-size: 24px;
+}
+.btn-green {
+    background-color: var(--btngreen);
+    color: var(--white);
+    border-radius: 2px;
+}
+.getting-started {
+    background-color: var(--bgbanner);
+    height: 436px;
+    border-radius: 13px;
+  }

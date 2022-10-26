@@ -1,3 +1,7 @@
+# Referensi
+1. Owl Carousel React : https://codesandbox.io/s/ezw97?file=/package.json
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

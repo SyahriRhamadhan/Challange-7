@@ -6,7 +6,7 @@ const Navbars = ()=>{
     return(
         <Container className=''>
         {['md'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="">
+        <Navbar key={expand} expand={expand}>
           <Container fluid>
             <Navbar.Brand href="#" ><img src={logo} alt="logo"/></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -27,7 +27,7 @@ const Navbars = ()=>{
                   <Nav.Link href="#action2">Testimonial</Nav.Link>
                   <Nav.Link href="#action2">FAQ</Nav.Link>
                 </Nav>
-                <Button variant="outline-success">Register</Button>
+                <Button variant='success' className='btn btn-green'>Register</Button>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
