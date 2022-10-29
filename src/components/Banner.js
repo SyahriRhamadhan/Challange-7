@@ -2,7 +2,7 @@ import { Container, Card, Button } from "react-bootstrap"
 
 const Banner =()=>{
     return(
-        <Container>
+        <Container className='mt-5'>
             <Card variant='bgblue' style={{ width: '80rem', height:'17em' }} className="text-center ">
                 <Card.Body className="getting-started text-white">
                     <Card.Title className="fw-bold mt-5">Sewa Mobil di (Lokasimu) Sekarang</Card.Title>

@@ -6,4 +6,5 @@ import Testimonial from "./Testimonial"
 import Banner from "./Banner"
 import Footer from "./Footer"
 import Faq from "./Faq"
-export {Navbars, Hero, Services, Whyus, Testimonial, Banner, Footer, Faq}
+import Owlcarousel from "./Owlcarousel"
+export {Navbars, Hero, Services, Whyus, Testimonial, Banner, Footer, Faq, Owlcarousel}

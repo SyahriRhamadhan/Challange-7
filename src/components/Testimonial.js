@@ -1,7 +1,7 @@
 import { Container, Row } from "react-bootstrap"
 const Testimonial = ()=>{
     return(
-        <Container id='testimonial'>
+        <Container className='mt-5' id='testimonial'>
             <Row>
                 <div className="col-md text-center">
                     <h3 className="fw-bold">Testimonial</h3>
