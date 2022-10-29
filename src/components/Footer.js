@@ -1,4 +1,5 @@
-import { Col, Container, Row } from "react-bootstrap"
+import { Col, Container, Row, Nav } from "react-bootstrap"
+import LinkContainer from "react-router-bootstrap/LinkContainer"
 import Logo from "../assets/img/logo.png"
 import FB from "../assets/img/icon_facebook.png"
 import IG from "../assets/img/icon_instagram.png"
@@ -30,7 +31,11 @@ const Footer = ()=>{
                 </Col>
                 <Col lg sm className="mt-5">
                     <p>Copyright Binar 2022</p>
-                    <img src={Logo} alt='logo'/>
+                    <LinkContainer to='/'>
+                        <Nav.Link>
+                        <img src={Logo} alt='logo'/>
+                        </Nav.Link>
+                    </LinkContainer>
                 </Col>
             </Row>
         </Container>

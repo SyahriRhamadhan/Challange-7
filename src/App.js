@@ -1,11 +1,11 @@
 
 import './assets/css/style.css';
 import './assets/js/style'
-import Page from './Routes/routes';
+import Routepage from './Routes/routes';
 
 function App() {
   return (
-    <Page/>
+    <Routepage/>
   );
 }
 

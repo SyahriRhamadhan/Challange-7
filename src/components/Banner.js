@@ -1,5 +1,5 @@
-import { Container, Card, Button } from "react-bootstrap"
-
+import { Container, Card, Button, Nav } from "react-bootstrap"
+import LinkContainer from "react-router-bootstrap/LinkContainer"
 const Banner =()=>{
     return(
         <Container className='mt-5'>
@@ -9,7 +9,11 @@ const Banner =()=>{
                         <Card.Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </Card.Text>
-                    <Button variant="success" className="mt-5">Go somewhere</Button>
+                        <LinkContainer to='/Searchcar' className='mt-5' >
+                            <Nav.Link>
+                                <Button  variant="success">Mulai Sewa Mobil</Button>
+                            </Nav.Link>
+                        </LinkContainer>
                 </Card.Body>
             </Card>
         </Container>

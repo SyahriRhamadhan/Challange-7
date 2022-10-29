@@ -7,4 +7,5 @@ import Banner from "./Banner"
 import Footer from "./Footer"
 import Faq from "./Faq"
 import Owlcarousel from "./Owlcarousel"
-export {Navbars, Hero, Services, Whyus, Testimonial, Banner, Footer, Faq, Owlcarousel}
+import Searchcars from "./Searchcars"
+export {Navbars, Hero, Services, Whyus, Testimonial, Banner, Footer, Faq, Owlcarousel, Searchcars}

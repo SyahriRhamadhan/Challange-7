@@ -1,14 +1,18 @@
 
 import { Navbar, Nav , Offcanvas, Container, Button} from 'react-bootstrap';
 import logo from "../assets/img/logo.png"
-
+import LinkContainer from 'react-router-bootstrap/LinkContainer';
 const Navbars = ()=>{
     return(
         <Container className=''>
         {['md'].map((expand) => (
         <Navbar key={expand} expand={expand}>
           <Container fluid>
-            <Navbar.Brand href="#" ><img src={logo} alt="logo"/></Navbar.Brand>
+            <LinkContainer to='/'>
+              <Nav.Link>
+              <Navbar.Brand ><img src={logo} alt="logo"/></Navbar.Brand>
+              </Nav.Link>
+            </LinkContainer>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}

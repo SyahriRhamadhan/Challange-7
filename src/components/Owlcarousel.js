@@ -10,10 +10,10 @@ const Owlcarousel =()=>{
         <Container fluid>
             <OwlCarousel className="owl-theme owl-carousel" center={true} items="3" loop margin={10} dots={false} 
                 nav
-                navText={[
-                    '<span class="arrow prev">‹</span>',
-                    '<span class="arrow next">›</span>'
-                  ]}
+                // navText={[
+                //     '<span class="arrow prev">‹</span>',
+                //     '<span class="arrow next">›</span>'
+                //   ]}
                 responsive={{
                     0: {
                         items: 1,
