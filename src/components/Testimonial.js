@@ -1,5 +1,4 @@
 import { Container, Row } from "react-bootstrap"
-import Owlcarousel from "./Owlcarousel"
 const Testimonial = ()=>{
     return(
         <Container fluid className='mt-5' id='testimonial'>
@@ -9,7 +8,6 @@ const Testimonial = ()=>{
                     <p>Berbagai review positif dari para pelanggan kami</p>
                 </div>
             </Row>
-            <Owlcarousel/>
         </Container>
     )
 }

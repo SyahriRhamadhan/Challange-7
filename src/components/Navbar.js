@@ -31,7 +31,7 @@ const Navbars = ()=>{
                   <Nav.Link href="#testimonial">Testimonial</Nav.Link>
                   <Nav.Link href="#faq">FAQ</Nav.Link>
                 </Nav>
-                <Button variant='success' className='btn btn-green'>Register</Button>
+                <Button variant='success' className='btn btn-green rounded-1'>Register</Button>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>

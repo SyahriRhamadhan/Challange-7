@@ -1,4 +1,5 @@
 import { Button, Card, Col, Container, Form, Row } from "react-bootstrap"
+import Cardcar from "./Cardcar"
 // import 'antd/dist/antd.css';
 // import { DatePickerProps } from 'antd';
 // import { DatePicker} from 'antd';
@@ -50,6 +51,7 @@ const Searchcars =()=>{
                     </Col>
                 </Row>
             </Card>
+            <Cardcar/>
         </Container>
     )
 }

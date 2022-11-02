@@ -58,7 +58,7 @@ const Owlcarousel =()=>{
                                 <BsFillStarFill className="icon-star"/>
                             </div>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, incidunt odit? Exercitationem earum officia est. Dolore nobis totam quia dolores ad velit tempora accusamus maiores eligendi, illo quidem modi fugit.</p>
-                            <p class="fw-bold">John Dee 32, Bromo</p>
+                            <p class="fw-bold">Sarah Cornor 32, Bromo</p>
                         </Col>
                     </Row>
                 </div>
