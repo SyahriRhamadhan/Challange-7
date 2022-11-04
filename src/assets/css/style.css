@@ -1,22 +1,24 @@
-:root{
+:root {
     --bg: #F1F3FF;
     --btngreen: #5CB85F;
     --bgbanner: #0d28a6;
     --bgcheck: #CFD4ED;
     --white: #ffff;
 
-    ;
+
 }
 
-.body{
-    background-color:var(--bg);
+.body {
+    background-color: var(--bg);
     font-family: Helvetica;
     font-style: normal;
 }
-.body2{
+
+.body2 {
     font-family: Helvetica;
     font-style: normal;
 }
+
 .checklist {
     background-color: var(--bgcheck);
     border-radius: 50%;
@@ -24,23 +26,29 @@
     padding: 3px;
     font-size: 24px;
 }
+
 .btn-green {
     background-color: var(--btngreen);
     color: var(--white);
     border-radius: 2px;
 }
+
 .getting-started {
     background-color: var(--bgbanner);
     border-radius: 13px;
 }
-.icon-star{
+
+.icon-star {
     color: gold;
 }
-.btn-left, .btn-right{
+
+.btn-left,
+.btn-right {
     border: 1px solid black;
     border-radius: 50%;
     cursor: pointer;
 }
+
 /* .arrow {
     position: absolute;
     border-radius: 50%;
@@ -62,6 +70,6 @@
     left: 49%;
   } */
 
-.SearchCar{
+.SearchCar {
     margin-top: -110px;
 }
