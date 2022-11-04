@@ -1,4 +1,4 @@
-import { Navbars, Hero, Footer, Searchcars } from "../components";
+import { Navbars, Hero, Footer, Searchcars } from '../components';
 import { Helmet } from 'react-helmet';
 const Searchcar =()=>{
     return(
@@ -6,11 +6,11 @@ const Searchcar =()=>{
             <Helmet>
                 <title>BCR | Search Car</title>
             </Helmet>
-            <div className="body">
+            <div className='body'>
                 <Navbars/>
                 <Hero/>
             </div>
-            <div className="body2">
+            <div className='body2'>
                 <Searchcars/>
                 <Footer/>
             </div>

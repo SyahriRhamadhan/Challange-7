@@ -1,6 +1,6 @@
 # Referensi
 1. Owl Carousel React : https://codesandbox.io/s/ezw97?file=/package.json
-
+2. React redux axios : https://codesandbox.io/s/jluir?file=/src/store/reducers/userReducer.js:0-492
 
 # Getting Started with Create React App
 

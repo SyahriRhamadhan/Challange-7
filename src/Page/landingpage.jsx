@@ -1,4 +1,4 @@
-import {Navbars, Hero, Services, Whyus, Testimonial, Banner, Footer, Faq, Owlcarousel} from "../components";
+import {Navbars, Hero, Services, Whyus, Testimonial, Banner, Footer, Faq, Owlcarousel} from '../components';
 import { Helmet } from 'react-helmet';
 const Home =()=>{
     return(
@@ -6,11 +6,11 @@ const Home =()=>{
             <Helmet>
                 <title>BCR | Home</title>
             </Helmet>
-            <div className="body">
+            <div className='body'>
                 <Navbars/>
                 <Hero/>
             </div>
-            <div className="body2">
+            <div className='body2'>
                 <Services/>
                 <Whyus/>
                 <Testimonial/>
