@@ -1,15 +1,16 @@
 import {GET_CARS, GET_ERROR} from '../types'
 
 const initialState = {
-    cars:[],
+    cars:false,
     loading:true
 }
 
-export default function foo(state = initialState, action){
+export default function car(state = initialState, action){
 
     switch(action.type){
-
+        
         case GET_CARS:
+            console.log("cek reducer", action)
         return {
             ...state,
             cars:action.payload,

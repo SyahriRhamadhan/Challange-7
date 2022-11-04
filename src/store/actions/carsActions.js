@@ -5,7 +5,7 @@ export const getCars = () => async dispatch => {
     
     try{
         const res = await axios.get(`https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/data/cars.min.json`)
-        console.log(res.data)
+        console.log("cek data",res.data)
         dispatch( {
             type: GET_CARS,
             payload: res.data

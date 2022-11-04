@@ -1,17 +1,54 @@
 import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap'
 import { BsPeople, BsGear, BsCalendar4 } from 'react-icons/bs';
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCars } from '../store/actions/carsActions'
 
-
 const Searchcars = () => {
+    const [carData, setCarData] = useState([]);
+    const [date, setDate] = useState("");
+    const [people, setPeople] = useState("");
+    const [carFiltered, setCarFiltered] = useState([]);
     const dispatch = useDispatch()
     const carsListData = useSelector(state => state.carsList)
     const { loading, error, cars } = carsListData
     useEffect(() => {
         dispatch(getCars())
     }, [dispatch])
+    useEffect(() => {
+        if (cars) {
+            setCarData(cars);
+        }
+    }, [cars]);
+    const getRandomInt = (min, max) => {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+    const populateCars = carData.map((car) => {
+        const isPositive = getRandomInt(0, 1) === 1;
+        const timeAt = new Date();
+        const mutator = getRandomInt(1000000, 100000000);
+        const availableAt = new Date(
+            timeAt.getTime() + (isPositive ? mutator : -1 * mutator)
+        );
+
+        return {
+            ...car,
+            availableAt,
+        };
+    });
+    const dateFormat = new Date(`${date}`);
+    const getEpochTime = dateFormat.getTime();
+
+    const filterCar = populateCars.filter(
+        (car) => car.capacity >= people && car.availableAt >= getEpochTime
+    );
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setCarFiltered(filterCar);
+    };
+
     return (
         <Container className=' SearchCar p-5 position-relative'>
             <Card>
@@ -28,14 +65,14 @@ const Searchcars = () => {
                     <Col lg>
                         <Form>
                             <Form.Label>Tanggal</Form.Label> <br />
-                            <Form.Control type='date' placeholder='Jumlah Penumpang' />
-                            {/* <DatePicker onChange={onChange} className='w-100'/> */}
+                            <Form.Control type='date' placeholder='Jumlah Penumpang' value={date}
+                                onChange={(e) => setDate(e.target.value)} />
                         </Form>
                     </Col>
                     <Col lg>
                         <Form>
                             <Form.Label>Waktu Jemput/Antar</Form.Label>
-                            <Form.Select>
+                            <Form.Select >
                                 <option value='00:00:00'>Pilih waktu</option>
                                 <option value='08:00:00'>08.00 WIB</option>
                                 <option value='09:00:00'>09.00 WIB</option>
@@ -48,17 +85,18 @@ const Searchcars = () => {
                     <Col lg>
                         <Form>
                             <Form.Label>Jumlah Penumpang(optional)</Form.Label>
-                            <Form.Control type='number' placeholder='Jumlah Penumpang' />
+                            <Form.Control type='number' placeholder='Jumlah Penumpang' value={people}
+                                onChange={(e) => setPeople(e.target.value)} />
                         </Form>
                     </Col>
                     <Col lg={2} className=' text-center m-auto p-auto' ><br />
-                        <Button variant='success' className='w-100 mt-2'>Search</Button>
+                        <Button variant='success' className='w-100 mt-2' onClick={handleSubmit} type='submit'>Search</Button>
                     </Col>
                 </Row>
             </Card>
             <Row className='m-auto'>
                 {loading ? 'Loading...' : error ? error.message :
-                    cars.map((post, index) => (
+                    carFiltered.map((post, index) => (
                         <Col md={4} className='mt-4' key={index}>
                             <Card style={{ width: '24em', height: '40em' }} >
                                 <Card.Body>
