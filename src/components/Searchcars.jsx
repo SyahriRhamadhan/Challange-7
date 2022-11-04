@@ -9,9 +9,10 @@ const Searchcars = () => {
     const [date, setDate] = useState("");
     const [people, setPeople] = useState("");
     const [carFiltered, setCarFiltered] = useState([]);
+    const [searched, setSearched] = useState(false);
     const dispatch = useDispatch()
     const carsListData = useSelector(state => state.carsList)
-    const { loading, error, cars } = carsListData
+    const { cars } = carsListData
     useEffect(() => {
         dispatch(getCars())
     }, [dispatch])
@@ -47,6 +48,7 @@ const Searchcars = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setCarFiltered(filterCar);
+        setSearched(true);
     };
 
     return (
@@ -94,34 +96,48 @@ const Searchcars = () => {
                     </Col>
                 </Row>
             </Card>
-            <Row className='m-auto'>
-                {loading ? 'Loading...' : error ? error.message :
-                    carFiltered.map((post, index) => (
-                        <Col md={4} className='mt-4' key={index}>
-                            <Card style={{ width: '24em', height: '40em' }} >
-                                <Card.Body>
-                                    <Card.Img variant='top' src={post.image} style={{ height: '16em' }} className=' rounded-4' alt={post.model} />
-                                    <Card.Title className='mt-4'><h6>{post.manufacture}/{post.model}</h6></Card.Title>
-                                    <h6 className='fw-bold'>Rp {post.rentPerDay.toString().replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, '$1.')}/hari</h6>
-                                    <Card.Text>
-                                        {post.description}
-                                    </Card.Text>
-                                    <Card.Text>
-                                        <BsPeople />  {post.capacity} Orang
-                                    </Card.Text>
-                                    <Card.Text>
-                                        <BsGear />  {post.transmission}
-                                    </Card.Text>
-                                    <Card.Text>
-                                        <BsCalendar4 />  Tahun {post.year}
-                                    </Card.Text>
-                                    <Button variant='success' className='rounded-1 p-2 mb-3 position-absolute bottom-0 start-50 translate-middle-x'
-                                        style={{ width: '22em' }}>Pilih Mobil</Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))}
-            </Row>
+            {searched ? (
+                <Row>
+                    {
+                        carFiltered.length === 0 ? (
+                            <div class="alert alert-danger mt-2 text-center fw-bold " role="alert">
+                                Data Tidak Ditemukan
+                            </div>
+                        ) : (
+                            carFiltered.map((post, index) => {
+                                return (
+                                    <Col md={4} className='mt-4 d-inline' key={index}>
+                                        <Card style={{ width: '24em', height: '40em' }} >
+                                            <Card.Body>
+                                                <Card.Img variant='top' src={post.image} style={{ height: '16em' }} className=' rounded-4' alt={post.model} />
+                                                <Card.Title className='mt-4'><h6>{post.manufacture}/{post.model}</h6></Card.Title>
+                                                <h6 className='fw-bold'>Rp {post.rentPerDay.toString().replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, '$1.')}/hari</h6>
+                                                <Card.Text>
+                                                    {post.description}
+                                                </Card.Text>
+                                                <Card.Text >
+                                                    <BsPeople />  {post.capacity} Orang
+                                                </Card.Text>
+                                                <Card.Text>
+                                                    <BsGear />  {post.transmission}
+                                                </Card.Text>
+                                                <Card.Text>
+                                                    <BsCalendar4 />  Tahun {post.year}
+                                                </Card.Text>
+                                                <Button variant='success' className='rounded-1 p-2 mb-3 position-absolute bottom-0 start-50 translate-middle-x'
+                                                    style={{ width: '22em' }}>Pilih Mobil</Button>
+                                            </Card.Body>
+                                        </Card>
+                                    </Col>
+                                );
+                            })
+                        )
+                    }
+                </Row>
+            ) : (
+                ""
+            )
+            }
         </Container >
     )
 }
